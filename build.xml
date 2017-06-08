@@ -7,7 +7,7 @@
 
 <target name="clean" depends="info">
 <echo>clean executed</echo>
-<rmdir dir="./classes"/>
+<delete dir="./classes"/>
 </target>
 
 <target name="compile" depends="clean">
