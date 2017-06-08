@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project name="source" default="info">
+
+<property file="build.properties" />
+
+<target name="info">
+<echo>info executed</echo>
+<echo>The ant version is ${ant.version}</echo>
+<echo>Admin name is ${name}</echo>
+<echo>Admin contact inforamtion is ${address}</echo>
+<echo>base dire${Basedirasedir}</echo>
+<echo>$ant project{ant.project.name}</echo>
+<echo>${ant.project.invoked-targets}</echo>
+<echo>${ant.core.lib}</echo>
+<echo>${ant.home}</echo>
+<echo>${ant.library.dir}</echo>
+
+</target>
+
+
+</project> 
