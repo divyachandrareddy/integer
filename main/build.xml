@@ -1,0 +1,36 @@
+<?xml version ="1.0"?>
+<project name="source" default="run">
+
+<target name="info">
+<echo>info executed</echo>
+</target>
+
+<target name="clean" depends="info">
+<echo>clean executed</echo>
+</target>
+
+<target name="compile" depends="clean">
+<echo>compile executed</echo>
+<javac srcdir="./java" destdir="./classes"/>
+</target>
+
+
+<target name="run" depends="jar">
+<echo>run executed</echo>
+<java jar="./jar/chandra.jar" fork="true"/>
+</target>
+
+<target name ="jar" depends="compile">
+<echo>jar done</echo>
+<mkdir dir="./jar" />
+<jar destfile="./jar/chandra.jar" basedir="./classes">
+<manifest>
+<attribute name="Main-class" value="demo">
+</attribute>
+</manifest>
+</jar>
+
+</target>
+
+
+</project>
